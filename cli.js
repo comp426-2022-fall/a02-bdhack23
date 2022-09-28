@@ -10,8 +10,35 @@ const moment-timezone = require('moment-timezone');
 const timezone = moment.tz.guest();
 
 //URL builder
-
+getdata () {
+	  curl -s -G \
+	    -d "latitude=${LAT}" \
+	    -d "longitude=${LONG}" \
+	    -d "daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant" \
+	    -d "current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch" \
+	    -d "timezone=${TZ}" \
+	    https://api.open-meteo.com/v1/forecast
+}
 //fetch API call
+const tz = "America/New_York"
+
+const latitude = "35.875"
+
+const longitude = "-79"
+
+const base_url = ''https://api.open-meteo.com/v1/forecast"
+
+const data_string = "latitude=" + latitude + "&longitude=" + longitude +"&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=" + tz
+
+const url = base_url + "?" + data_string
+
+const response = await fetch( url )
+
+const data = await response.json()
+
+console.log( url )
+
+console.log( data )
 
 //response text
 const days = args.d
