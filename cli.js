@@ -22,6 +22,10 @@ const moment-timezone = require('moment-timezone');
 //timezone constant
 const timezone = moment.tz.guest();
 
+//latitude and longitude constants
+const latitude = 35;
+const longitude = -79
+
 //URL builder
 getdata () {
 	  curl -s -G \
@@ -35,7 +39,7 @@ getdata () {
 //fetch API call
 const tz = "America/New_York"
 
-const latitude = "35.875"
+const latitude = "35"
 
 const longitude = "-79"
 
