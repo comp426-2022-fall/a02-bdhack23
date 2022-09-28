@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+//imports
+import moment from "moment-timezone";
+import fetch from "node-fetch";
+
 //help stuff
 show_help () {
   printf -- "Usage: $0 [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE\n"
@@ -17,7 +21,7 @@ show_help () {
 //require moment-timezone
 const moment-timezone = require('moment-timezone');
 
-//import moment from the package
+//timezone constant
 const timezone = moment.tz.guest();
 
 //URL builder
