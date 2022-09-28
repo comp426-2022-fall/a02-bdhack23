@@ -5,17 +5,15 @@ import moment from "moment-timezone";
 import fetch from "node-fetch";
 
 //help stuff
-show_help () {
-  printf -- "Usage: $0 [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE\n"
-  printf -- "\n"
-  printf -- "  -h\t\tShow this help message and exit.\n"
-  printf -- "  -n, -s\tLatitude: N positive; S negative.\n"
-  printf -- "  -e, -w\tLongitude: E positive; W negative.\n"
-  printf -- "  -z\t\tTime zone: uses /etc/timezone by default.\n"
-  printf -- "  -d 0-6\tDay to retrieve weather: 0 is today; defaults to 1.\n"
-  printf -- "  -v\t\tVerbose output: returns full weather forecast.\n"
-  printf -- "  -j\t\tEcho pretty JSON from open-meteo API and exit.\n"
-	exit 0	
+if(argv[0] == -h){
+	console.log("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
+	console.log( "-h           Show this help message and exit.")
+	console.log("-n, -s        Latitude: N positive; S negative.")
+	console.log("-e, -w        Longitude: E positive; W negative.")
+	console.log("-z            Time zone: uses tz.guess() from moment-timezone by default.")
+	console.log("-d 0-6        Day to retrieve weather: 0 is today; defaults to 1.")
+	console.log("-j            Echo pretty JSON from open-meteo API and exit.")
+	process.exit(0)
 }
 
 //require moment-timezone
