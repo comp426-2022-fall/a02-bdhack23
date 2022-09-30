@@ -22,32 +22,14 @@ const moment-timezone = require('moment-timezone');
 //timezone constant
 const timezone = moment.tz.guest();
 
-//latitude and longitude constants
-const latitude = 35;
-const longitude = -79
-
-//URL builder
-getdata () {
-	  curl -s -G \
-	    -d "latitude=${LAT}" \
-	    -d "longitude=${LONG}" \
-	    -d "daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant" \
-	    -d "current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch" \
-	    -d "timezone=${TZ}" \
-	    https://api.open-meteo.com/v1/forecast
-}
-//fetch API call
+//fetch API call and URL Building
 const tz = "America/New_York"
 
 const latitude = "35"
 
 const longitude = "-79"
 
-const base_url = ''https://api.open-meteo.com/v1/forecast"
-
-const data_string = "latitude=" + latitude + "&longitude=" + longitude +"&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=" + tz
-
-const url = base_url + "?" + data_string
+const url = "https://api.open-meteo.com/v1/forecast?" + "latitude=" + latitude + "&longitude=" + longitude +"&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=" + tz 
 
 const response = await fetch( url )
 
