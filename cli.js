@@ -18,11 +18,8 @@ if(argv[0] == '-h'){
 	process.exit(0)
 }
 
-//timezone constant
-const timezone = moment.tz.guest();
-
 //fetch API call and URL Building
-const tz = "America/New_York"
+const tz = moment.tz.guest();
 
 const latitude = "35"
 
