@@ -7,7 +7,7 @@ import fetch from "node-fetch";
 //help stuff
 const argv = process.argv.slice(2);
 
-if(argv[0] == -h){
+if(argv[0] == '-h'){
 	console.log("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
 	console.log( "-h           Show this help message and exit.")
 	console.log("-n, -s        Latitude: N positive; S negative.")
