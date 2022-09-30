@@ -19,7 +19,7 @@ if(argv[0] == '-h'){
 }
 
 //fetch API call and URL Building
-const tz = moment.tz.guest();
+const tz = America/New_York
 
 const latitude = "35"
 
