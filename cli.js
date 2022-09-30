@@ -16,9 +16,6 @@ if(argv[0] == -h){
 	process.exit(0)
 }
 
-//require moment-timezone
-const moment-timezone = require('moment-timezone');
-
 //timezone constant
 const timezone = moment.tz.guest();
 
