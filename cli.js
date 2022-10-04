@@ -5,7 +5,7 @@ import moment from "moment-timezone";
 import fetch from "node-fetch";
 
 //help stuff
-const argv = process.argv.slice(2);
+const args = process.argv.slice(2);
 
 if(argv[0] == '-h'){
 	console.log("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
