@@ -36,11 +36,7 @@ console.log( url )
 console.log( data )
 
 //response text
-const days = 1
-
-if (process.argv.indexOf('-d') > -1) {
-	days = argv[process.argv.indexOf('-d') - 1];
-}
+const days = args.d
 
 if (days == 0) {
 	if (data.daily.precipitation_hours[days] == 0) {
