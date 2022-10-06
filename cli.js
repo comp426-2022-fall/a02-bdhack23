@@ -36,9 +36,7 @@ console.log( url )
 console.log( data )
 
 //response text
-const days = args.d
-
-console.log(days);
+const days = args.d || 1;
 
 if (days == 0) {
 	if (data.daily.precipitation_hours[days] == 0) {
