@@ -38,6 +38,8 @@ console.log( data )
 //response text
 const days = args.d
 
+console.log(days);
+
 if (days == 0) {
 	if (data.daily.precipitation_hours[days] == 0) {
 		console.log("You will not need your galoshes")
