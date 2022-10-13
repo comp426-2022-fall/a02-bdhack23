@@ -23,7 +23,7 @@ if(args[0] == '-h'){
 //moment.tz.guess()
 let tz = args.z; 
 if(tz == null){
-	timezone = moment.tz.guess();
+	tz = moment.tz.guess();
 }
 
 const latitude = "35"
