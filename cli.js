@@ -20,7 +20,7 @@ if(args[0] == '-h'){
 
 //fetch API call and URL Building
 // const tz = moment.tz.guess();
-const tz = "Africa/Abidjan";
+const tz = 'Africa/Abidjan';
 
 const latitude = "35"
 
