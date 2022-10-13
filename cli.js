@@ -22,7 +22,7 @@ if(args[0] == '-h'){
 //const tz = args.z 
 //moment.tz.guess()
 let tz = args.z; 
-if(timezone == null){
+if(tz == null){
 	timezone = moment.tz.guess();
 }
 
