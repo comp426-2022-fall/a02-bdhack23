@@ -53,7 +53,7 @@ if (days == 0) {
 	console.log(" today.")
 	process.exit(0)
 } else if (days > 1) {
-	if (data.daily.precipitation_sum[d] > 0) {
+	if (data.daily.precipitation_sum[days] > 0) {
 		console.log("You will not need your galoshes")
 	} else {
 		console.log("You might need your galoshes")
