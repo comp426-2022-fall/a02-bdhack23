@@ -60,7 +60,7 @@ if (days == 0) {
 	}
 	console.log(" in" + days + " days")
 	process.exit(0)
-} else if (days == 1) {
+} else {
 	if (data.daily.precipitation_hours[days] == 0) {
 		console.log("You will not need your galoshes")
 	} else {
