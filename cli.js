@@ -21,7 +21,7 @@ if(args[0] == '-h'){
 //fetch API call and URL Building
 //const tz = args.z 
 //moment.tz.guess()
-let timezone = args.z; 
+let tz = args.z; 
 if(timezone == null){
 	timezone = moment.tz.guess();
 }
