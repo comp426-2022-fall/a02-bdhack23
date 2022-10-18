@@ -42,7 +42,7 @@ console.log( url )
 console.log( data )
 
 //response text
-const days = 1;
+var days = 1;
 if (process.argv.indexOf('-d') > -1) {
 	days = args[process.argv.indexOf('-d') - 1];
 }
