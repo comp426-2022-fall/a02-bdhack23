@@ -27,6 +27,9 @@ if(tz == null){
 }
 
 const latitude = 35
+if (latitude > 90 || latitude < -90) {
+		process.exit(1);
+}
 
 const longitude = -79
 
