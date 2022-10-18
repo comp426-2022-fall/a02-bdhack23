@@ -27,11 +27,34 @@ if(tz == null){
 }
 
 const latitude = 35
-if (latitude > 90 || latitude < -90) {
-		process.exit(1);
+// check if within range
+if (process.args.indexOf('-n') > -1){
+	latitude = args[process.argv.indexOf('-n') - 1];
+} else if (latitude > 90 || latitude < -90){
+	process.exit(1);
 }
 
+if (process.args.indexOf('-s') > -1){
+	latitude = args[process.argv.indexOf('-n') - 1] * -1;
+} else if (latitude > 90 || latitude < -90){
+	process.exit(1);
+}
+	
+    
 const longitude = -79
+// check if within range
+
+if (process.args.indexOf('-e') > -1){
+	longitude = args[process.argv.indexOf('-e') - 1] * 1;
+} else if (latitude > 90 || latitude < -90){
+	process.exit(1);
+}
+
+if (process.args.indexOf('-w') > -1){
+	longitude = args[process.argv.indexOf('-w') - 1];
+} else if (latitude > 90 || latitude < -90){
+	process.exit(1);
+}
 
 // const url = "https://api.open-meteo.com/v1/forecast?" + "latitude=" + latitude + "&longitude=" + longitude +"&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=" + tz 
 const url = "https://api.open-meteo.com/v1/forecast?" + "latitude=" + latitude + "&longitude=" + longitude + "&daily=precipitation_sum&timezone=" + tz;
