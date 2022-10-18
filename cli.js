@@ -44,7 +44,7 @@ console.log( data )
 //response text
 const days = 1;
 if (process.argv.indexOf('-d') > -1) {
-	days = argv[process.argv.indexOf('-d') - 1];
+	days = args[process.argv.indexOf('-d') - 1];
 }
 //data.daily.precipitation_hours[days] == 0
 if (days == 0) {
