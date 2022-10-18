@@ -46,27 +46,27 @@ const days = args.d || 1;
 //data.daily.precipitation_hours[days] == 0
 if (days == 0) {
 	if (data.daily.precipitation_sum[0] > 0) {
-		console.log("You will not need your galoshes")
+		process.stdout.write("You will not need your galoshes")
 	} else {
-		console.log("You might need your galoshes")
+		process.stdout.write("You might need your galoshes")
 	}
-	console.log(" today.")
+	process.stdout.write(" today.")
 	process.exit(0)
 } else if (days > 1) {
 	if (data.daily.precipitation_sum[days] > 0) {
-		console.log("You will not need your galoshes")
+		process.stdout.write("You will not need your galoshes")
 	} else {
-		console.log("You might need your galoshes")
+		process.stdout.write("You might need your galoshes")
 	}
-	console.log(" in" + days + " days")
+	process.stdout.write(" in" + days + " days")
 	process.exit(0)
 } else {
 	if (data.daily.precipitation_sum[1] > 0) {
-		console.log("You will not need your galoshes")
+		process.stdout.write("You will not need your galoshes")
 	} else {
-		console.log("You might need your galoshes")
+		process.stdout.write("You might need your galoshes")
 	}
-	console.log(" tomorrow.")
+	process.stdout.write(" tomorrow.")
 	process.exit(0)
 }
 	
