@@ -28,13 +28,13 @@ if(tz == null){
 
 const latitude = 35
 // check if within range
-if (process.args.indexOf('-n') > -1){
+if (process.argv.indexOf('-n') > -1){
 	latitude = args[process.argv.indexOf('-n') - 1];
 } else if (latitude > 90 || latitude < -90){
 	process.exit(1);
 }
 
-if (process.args.indexOf('-s') > -1){
+if (process.argv.indexOf('-s') > -1){
 	latitude = args[process.argv.indexOf('-n') - 1] * -1;
 } else if (latitude > 90 || latitude < -90){
 	process.exit(1);
@@ -44,13 +44,13 @@ if (process.args.indexOf('-s') > -1){
 const longitude = -79
 // check if within range
 
-if (process.args.indexOf('-e') > -1){
+if (process.argv.indexOf('-e') > -1){
 	longitude = args[process.argv.indexOf('-e') - 1] * 1;
 } else if (latitude > 90 || latitude < -90){
 	process.exit(1);
 }
 
-if (process.args.indexOf('-w') > -1){
+if (process.argv.indexOf('-w') > -1){
 	longitude = args[process.argv.indexOf('-w') - 1];
 } else if (latitude > 90 || latitude < -90){
 	process.exit(1);
