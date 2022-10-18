@@ -26,7 +26,7 @@ if(tz == null){
 	tz = moment.tz.guess();
 }
 
-const latitude = 35
+var latitude = 35
 // check if within range
 if (process.argv.indexOf('-n') > -1){
 	latitude = args[process.argv.indexOf('-n') - 1];
@@ -41,7 +41,7 @@ if (process.argv.indexOf('-s') > -1){
 }
 	
     
-const longitude = -79
+var longitude = -79
 // check if within range
 
 if (process.argv.indexOf('-e') > -1){
