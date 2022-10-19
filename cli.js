@@ -42,7 +42,7 @@ if (process.argv.indexOf('-s') > -1){
 }
 	
     
-let latitude = process.argv.indexOf('-w');
+let longitude = process.argv.indexOf('-w');
 // check if within range
 
 if (process.argv.indexOf('-e') > -1){
